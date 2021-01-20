@@ -1,0 +1,105 @@
+@charset "UTF-8";
+body {
+  font: 100% "Space Mono", monospace;
+  color: #6b717f;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  overflow-x: hidden; }
+
+main {
+  padding: 0 1em; }
+
+/*Début article et imbrification*/
+article {
+  display: flex;
+  flex-wrap: wrap; }
+  article section {
+    flex-grow: 1;
+    flex-basis: 45%;
+    border: 1px #8C8C8C solid;
+    -webkit-box-shadow: 10px 10px 15px -4px #6b717f;
+    -moz-box-shadow: 10px 10px 15px -4px #6b717f;
+    box-shadow: 10px 10px 15px -4px #6b717f;
+    padding: 16px;
+    margin: 16px;
+    clear: both;
+    overflow: auto;
+    box-sizing: border-box; }
+    article section #selling-points {
+      flex-grow: 2;
+      flex-basis: 100%; }
+    article section .advantages li:nth-child(6n + 1) {
+      color: #e60000;
+      background-color: #0d0d0d; }
+    article section .advantages li:nth-child(6n + 2) {
+      color: #cc0000;
+      background-color: #1a1a1a; }
+    article section .advantages li:nth-child(6n + 3) {
+      color: #b30000;
+      background-color: #262626; }
+    article section .advantages li:nth-child(6n + 4) {
+      color: #990000;
+      background-color: #333333; }
+    article section .advantages li:nth-child(6n + 5) {
+      color: maroon;
+      background-color: #404040; }
+    article section .advantages li:nth-child(6n + 6) {
+      color: #660000;
+      background-color: #4d4d4d; }
+
+article code {
+  background: #000;
+  border: 1px solid #6b717f;
+  color: #8C8C8C;
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.5em;
+  display: block;
+  word-wrap: break-word; }
+  article code .before {
+    float: left;
+    width: 40%; }
+  article code .after {
+    float: right;
+    width: 40%; }
+
+/*Début imbri TITRE */
+h1, h2, h3 {
+  color: #BF4080; }
+
+h1 {
+  text-align: center; }
+
+h3 {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 32px;
+  margin-bottom: Opx; }
+
+/*Début imbri message */
+.message {
+  padding: 16px; }
+
+.success, .error, .warning {
+  border: 1px solid #6b717f;
+  padding: 16px;
+  color: #fff; }
+
+.success {
+  background-color: green; }
+
+.error {
+  background-color: red; }
+  .error:hover {
+    background-color: green; }
+
+.warning {
+  background-color: orange; }
+
+/*# sourceMappingURL=style.css.map */

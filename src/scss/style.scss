@@ -1,0 +1,117 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+
+
+
+body{
+    font: 100% "Space Mono", monospace;
+    color: $gray-dark;
+    margin: 0;
+    padding: 0;
+    background-color: $white;
+    overflow-x: hidden;
+}
+main{
+    padding: 0 1em;
+}
+/*Début article et imbrification*/
+article{
+    display: flex;
+    flex-wrap: wrap;
+
+    section{
+        flex-grow: 1;
+        flex-basis: 45%;
+        border: 1px $gray-light solid;
+        @include box-shadow;
+        padding: 16px;
+        margin: 16px;
+        clear: both;
+        overflow: auto;
+        box-sizing: border-box;
+
+        #selling-points{
+            flex-grow: 2;
+            flex-basis: 100%;
+        }
+        .advantages{
+            @for $i from 1 through 6 {
+                li:nth-child(6n + #{$i}){
+                    color: darken($colorli, $i* 5%);
+                    background-color: lighten($colorbg, $i*5%);
+                }
+            }
+            
+        }
+    }
+}
+ 
+article code {
+    background: $black;
+    border: 1px solid $gray-dark;
+    color: $gray-light;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+
+    .before{
+        float: left;
+        width: 40%;
+    }
+
+    .after{
+        float: right;
+        width: 40%;
+    }
+}
+
+
+/*Début imbri TITRE */
+
+
+h1, h2, h3{
+    color: $pink;
+}
+
+h1{
+    text-align: center;
+}
+h3{
+    text-align: center;
+    font-size: 1.5em;
+    padding: $padding *2;
+    margin-bottom: Opx;
+}
+
+/*Début imbri message */
+
+.message{
+    padding: 16px ;
+}
+.success, .error, .warning{
+    border: 1px solid $gray-dark;
+    padding: 16px;
+    color: $white;
+}
+.success{
+    background-color: green;
+}
+.error{
+    background-color: red;
+
+    &:hover{
+        background-color: green;
+    }
+}
+.warning{
+    background-color: orange;
+}
+
