@@ -3,8 +3,7 @@
 
 ### language used
 
-- HTML
-- CSS
+- HTML 
 - SCSS
 
 ### Link to my project 
